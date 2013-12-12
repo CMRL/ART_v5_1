@@ -1,2 +1,10 @@
 AUGMENTED REFLECTION TECHNOLOGY README
 
+There are two main parts to this project:
+
+1) The ART Framework which contains the following two aspects:
+	
+	-> Unity Framework (Unity3D project containing framework indepenent resources)
+	-> Visual Studio 2010 Framework (VS2010 Solution containing each project used in ART_5_1)
+
+2) Augmented Reflection Technology Version 5.1 with all necessary components
