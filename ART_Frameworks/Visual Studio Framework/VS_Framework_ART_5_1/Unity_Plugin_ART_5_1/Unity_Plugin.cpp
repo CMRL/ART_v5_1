@@ -191,7 +191,9 @@ void EXPORT_API reloadConfigFile_right()
 /* such as background subtraction and finger tracking functionalities,	*/
 /* and copying the frame across to Unity.								*/
 //////////////////////////////////////////////////////////////////////////
-/* @param																*/
+/* @param colors is the pointer passed in from Unity to copy pixels to.	*/
+/* @param fingertips in the pointer passed in from Unity to copy the	*/
+/*		  finger tracking details to.									*/
 /************************************************************************/
 #ifndef USE_LEFT_CAM
 void EXPORT_API frame_copy_to_Unity_left(ColorRGBA* colors, Fingertip* fingertips)
