@@ -17,7 +17,7 @@ using System.Net.Sockets;
 using System.IO;
 using System.Threading;
 
-namespace TheraMem
+namespace ART_Application
 {
     /******
      * This is the main class for TheraMem application.
@@ -28,9 +28,15 @@ namespace TheraMem
     public partial class TheraMem : Form
     {
         TcpClient clientSocket;
+        NetworkStream clientStream;
+        StreamReader clientReader;
+        StreamWriter clientWriter;
+
         ArrayList commandArray = new ArrayList();
         bool gameRunning = false;
         string gameMode = "";
+        string leftOrRight = "";
+        string applicationCode = "1";
         bool AccDecLeft;
         bool AccDecRight;
 
@@ -44,6 +50,20 @@ namespace TheraMem
             {
                 this.gameMode = value;
             }
+        }
+
+        public string SetLeftOrRight
+        {
+            get
+            {
+                return this.leftOrRight;
+            }
+            set
+            {
+                this.leftOrRight = value;
+            }
+
+
         }
 
         /**
@@ -86,67 +106,85 @@ namespace TheraMem
                 AppendLine(text);
                 btnPause.Enabled = false;
 
+                clientStream = clientSocket.GetStream();
+                clientWriter = new StreamWriter(clientStream);
+                clientReader = new StreamReader(clientStream);
+
             }
             catch (Exception ex)
             {
-                AppendLine("No Server to connect to..");
+                AppendLine("No Server to connect to.." + ex.Message);
             }
 
+        }
+
+        private void sendString(string toSend)
+        {
+            try
+            {
+                clientWriter.WriteLine(toSend);
+                clientWriter.Flush();
+                AppendLine(toSend);
+
+            }
+            catch (Exception ex)
+            {
+                AppendLine(ex.ToString());
+            }
         }
 
         //----------------------------------  GENERIC COMMANDS FOR THERA-MEM DIALOG -----------------------//
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            string boxValue = "";
-            string tmpString = "";
+            int numCommands = 1;
+            string boxValue = numCommands.ToString() + "{";
             bool CorrectOptionSelected = false;
-            tmpString += comboGameStyle.SelectedItem.ToString();
-            if (tmpString == "TheraMem ( Orignal )")
+
+            if (btnPlay.Text == "Stop")
             {
                 CorrectOptionSelected = true;
-                boxValue = "TheraMemOrignal";
+                boxValue = numCommands.ToString() + "{$TheraMem_Stop";
             }
-            else if (tmpString == "TheraMem ( Memory )")
+            else
             {
-                CorrectOptionSelected = true;
-                boxValue = "TheraMemMemory";
-            }
+                // Game is starting
+                string tmpString = "";
+                tmpString += comboGameStyle.SelectedItem.ToString();
 
-
-            if (CorrectOptionSelected)
-            {
-                string toSend;
-
-                toSend = "1$" + boxValue;
-
-                if (btnPlay.Text == "Stop")
+                if (tmpString == "TheraMem ( Original )")
                 {
-                    toSend += "_Stop";
-                    AppendLine("Stoping " + toSend);
+                    CorrectOptionSelected = true;
+                    boxValue += "$TheraMemOriginal";
+                }
+                else if (tmpString == "TheraMem ( Memory )")
+                {
+                    CorrectOptionSelected = true;
+                    boxValue += "$TheraMemMemory";
+                }
+                else if (tmpString == "TheraMem ( One-Handed )")
+                {
+                    CorrectOptionSelected = true;
+                    boxValue += "$TheraMemOneHanded";
 
+                    Form leftOrRightChoice = new TheraMemLeftOrRight(this);
+                    leftOrRightChoice.ShowDialog();
+                    boxValue += "_" + this.leftOrRight;
                 }
                 else
                 {
-
-                    AppendLine("Starting " + toSend);
+                    // Nothing
                 }
+            }
 
+            boxValue += "};";
 
+            if (CorrectOptionSelected)
+            {
+                string toSend = "";
+                toSend += applicationCode + "," + boxValue;
 
-                byte[] myWriteBuffer = Encoding.ASCII.GetBytes(toSend);
-
-                try
-                {
-                    NetworkStream clientStream = clientSocket.GetStream();
-
-                    clientStream.Write(myWriteBuffer, 0, myWriteBuffer.Length);
-
-                }
-                catch (Exception ex)
-                {
-                    AppendLine(ex.ToString());
-                }
+                sendString(toSend);
 
                 warning.Text = "";
                 if (btnPlay.Text == "Play")
@@ -154,7 +192,7 @@ namespace TheraMem
                     gameRunning = true;
                     comboGameStyle.Enabled = false;
                     btnPause.Enabled = true;
-                    btnPause.Text= "Pause";
+                    btnPause.Text= "Resume";
                     btnPlay.Text = "Stop";
                 }
                 else if (btnPlay.Text == "Stop")
@@ -175,61 +213,35 @@ namespace TheraMem
 
         private void btnPause_Click(object sender, EventArgs e)
         {
-             
-            string pause = "1$";
+            int numCommands = 1;
+            string pause = numCommands.ToString() + "{";
+            
             if (btnPause.Text == "Pause")
             {
                 btnPause.Text = "Resume";
-                pause += "PauseGame";
+                pause += "$PauseGame";
             }
             else
             {
                 btnPause.Text = "Pause";
-                pause += "ResumeGame";
+                pause += "$ResumeGame";
             }
 
-            if (pause != "")
-            {
+            pause += "};";
 
-                string toSend = pause;
-                byte[] myWriteBuffer = Encoding.ASCII.GetBytes(toSend);
+            string toSend = applicationCode + "," + pause;
+            sendString(toSend);
 
-                try
-                {
-                    NetworkStream clientStream = clientSocket.GetStream();
-
-                    clientStream.Write(myWriteBuffer, 0, myWriteBuffer.Length);
-                    AppendLine("Starting " + toSend);
-
-                }
-                catch (Exception ex)
-                {
-                    AppendLine(ex.ToString());
-                }
-
-                warning.Text = "";
-            }
+            warning.Text = "";
                        
         }
-
 
         // ------- Function to handle "Quit Application" Button  ------------//
         private void QuitApplication_Click(object sender, EventArgs e)
         {
-            string toSend = "1$Shutdown";
-            byte[] myWriteBuffer = Encoding.ASCII.GetBytes(toSend);
-
-            try
-            {
-                NetworkStream clientStream = clientSocket.GetStream();
-
-                clientStream.Write(myWriteBuffer, 0, myWriteBuffer.Length);
-                AppendLine(toSend.Substring(2));
-            }
-            catch (Exception ex)
-            {
-                AppendLine(ex.ToString());
-            }
+            int numCommands = 1;
+            string toSend = applicationCode + "," + numCommands.ToString() + "{$Shutdown};";
+            sendString(toSend);
 
             // Close application after waiting 1 second for Unity to stop the server etc.
             Thread.Sleep(1000);
@@ -288,11 +300,26 @@ namespace TheraMem
             //}
         }
 
-      
+        private void button_advanced_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //string toSend = applicationCode + ",1{$Options};";
+                //clientWriter.WriteLine(toSend);
+                //clientWriter.Flush();
+                Form optionsForm = new Main_Dialog();
+                optionsForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                AppendLine("error: " + ex.Message);
+            }
 
-        
-       
-
-     
+            //string toSend = applicationCode + "," + "1{$Options};";
+            //sendString(toSend);
+            //this.Hide();
+            
+            //this.Show();
+        }
      }
 }

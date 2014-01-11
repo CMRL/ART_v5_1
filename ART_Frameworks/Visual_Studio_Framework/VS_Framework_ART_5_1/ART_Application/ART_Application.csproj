@@ -60,6 +60,18 @@
     <Compile Include="GameOptions.Designer.cs">
       <DependentUpon>GameOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadProfile.Designer.cs">
+      <DependentUpon>LoadProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewOrEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewOrEditProfile.Designer.cs">
+      <DependentUpon>NewOrEditProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +86,23 @@
     <Compile Include="TheraMem.Designer.cs">
       <DependentUpon>TheraMem.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheraMemLeftOrRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheraMemLeftOrRight.Designer.cs">
+      <DependentUpon>TheraMemLeftOrRight.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameOptions.resx">
       <DependentUpon>GameOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadProfile.resx">
+      <DependentUpon>LoadProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrEditProfile.resx">
+      <DependentUpon>NewOrEditProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
@@ -95,6 +119,9 @@
     <EmbeddedResource Include="TheraMem.resx">
       <DependentUpon>TheraMem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TheraMemLeftOrRight.resx">
+      <DependentUpon>TheraMemLeftOrRight.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +133,9 @@
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>call "$(SolutionDir)BuildEvents.bat"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

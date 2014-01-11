@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConfigHandler.hpp" />
+    <ClInclude Include="FingerTracker.hpp" />
     <ClInclude Include="SegmentationManager.hpp" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>

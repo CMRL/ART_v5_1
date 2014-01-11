@@ -29,47 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Dialog));
-            this.Apply = new System.Windows.Forms.Button();
-            this.QuitApplication = new System.Windows.Forms.Button();
-            this.textBox = new System.Windows.Forms.TextBox();
-            this.label_leftView = new System.Windows.Forms.Label();
-            this.label_rightView = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rbPanel_leftView = new System.Windows.Forms.Panel();
-            this.rb_leftViewLeftCam = new System.Windows.Forms.RadioButton();
-            this.rb_leftViewNoCam = new System.Windows.Forms.RadioButton();
-            this.rb_leftViewRightCam = new System.Windows.Forms.RadioButton();
-            this.cb_leftViewMirror = new System.Windows.Forms.CheckBox();
-            this.rbPanel_rightView = new System.Windows.Forms.Panel();
-            this.rb_rightViewNoCam = new System.Windows.Forms.RadioButton();
-            this.rb_rightViewRightCam = new System.Windows.Forms.RadioButton();
-            this.rb_rightViewLeftCam = new System.Windows.Forms.RadioButton();
-            this.cb_rightViewMirror = new System.Windows.Forms.CheckBox();
-            this.pb_leftViewLeftHand = new System.Windows.Forms.PictureBox();
-            this.pb_leftViewRightHand = new System.Windows.Forms.PictureBox();
-            this.pb_rightViewLeftHand = new System.Windows.Forms.PictureBox();
-            this.pb_rightViewRightHand = new System.Windows.Forms.PictureBox();
-            this.pb_leftViewLeftHandMirror = new System.Windows.Forms.PictureBox();
-            this.pb_leftViewRightHandMirror = new System.Windows.Forms.PictureBox();
-            this.pb_rightViewRightHandMirror = new System.Windows.Forms.PictureBox();
-            this.pb_rightViewLeftHandMirror = new System.Windows.Forms.PictureBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.Restart = new System.Windows.Forms.Button();
-            this.Pause = new System.Windows.Forms.Button();
-            this.warning = new System.Windows.Forms.Label();
-            this.StartGame = new System.Windows.Forms.Button();
-            this.comboBox_gamesList = new System.Windows.Forms.ComboBox();
-            this.label_selection = new System.Windows.Forms.Label();
-            this.label_appSelection = new System.Windows.Forms.Label();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.button_done = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnAdvOptRight = new System.Windows.Forms.Button();
             this.btnAdvOptLeft = new System.Windows.Forms.Button();
@@ -132,474 +93,75 @@
             this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label_rightCamera = new System.Windows.Forms.Label();
             this.label_leftCamera = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.rbPanel_leftView.SuspendLayout();
-            this.rbPanel_rightView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewLeftHand)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewRightHand)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewLeftHand)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewRightHand)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewLeftHandMirror)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewRightHandMirror)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewRightHandMirror)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewLeftHandMirror)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cb_applyChangesImmediately = new System.Windows.Forms.CheckBox();
+            this.cb_rightViewMirror = new System.Windows.Forms.CheckBox();
+            this.rbPanel_rightView = new System.Windows.Forms.Panel();
+            this.rb_rightViewNoCam = new System.Windows.Forms.RadioButton();
+            this.rb_rightViewRightCam = new System.Windows.Forms.RadioButton();
+            this.rb_rightViewLeftCam = new System.Windows.Forms.RadioButton();
+            this.cb_leftViewMirror = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_rightView = new System.Windows.Forms.Label();
+            this.label_leftView = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.Apply = new System.Windows.Forms.Button();
+            this.rbPanel_leftView = new System.Windows.Forms.Panel();
+            this.rb_leftViewLeftCam = new System.Windows.Forms.RadioButton();
+            this.rb_leftViewNoCam = new System.Windows.Forms.RadioButton();
+            this.rb_leftViewRightCam = new System.Windows.Forms.RadioButton();
+            this.pb_leftViewRightHand = new System.Windows.Forms.PictureBox();
+            this.pb_leftViewLeftHand = new System.Windows.Forms.PictureBox();
+            this.pb_leftViewLeftHandMirror = new System.Windows.Forms.PictureBox();
+            this.pb_leftViewRightHandMirror = new System.Windows.Forms.PictureBox();
+            this.pb_rightViewLeftHand = new System.Windows.Forms.PictureBox();
+            this.pb_rightViewLeftHandMirror = new System.Windows.Forms.PictureBox();
+            this.pb_rightViewRightHand = new System.Windows.Forms.PictureBox();
+            this.pb_rightViewRightHandMirror = new System.Windows.Forms.PictureBox();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gboxColourManip.SuspendLayout();
             this.gboxLuminanceManip.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.rbPanel_rightView.SuspendLayout();
+            this.rbPanel_leftView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewRightHand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewLeftHand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewLeftHandMirror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewRightHandMirror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewLeftHand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewLeftHandMirror)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewRightHand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewRightHandMirror)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Apply
-            // 
-            this.Apply.Location = new System.Drawing.Point(295, 462);
-            this.Apply.Name = "Apply";
-            this.Apply.Size = new System.Drawing.Size(90, 23);
-            this.Apply.TabIndex = 0;
-            this.Apply.Text = "Apply";
-            this.Apply.UseVisualStyleBackColor = true;
-            this.Apply.Click += new System.EventHandler(this.Apply_Click);
-            // 
-            // QuitApplication
-            // 
-            this.QuitApplication.Location = new System.Drawing.Point(3, 528);
-            this.QuitApplication.Name = "QuitApplication";
-            this.QuitApplication.Size = new System.Drawing.Size(90, 23);
-            this.QuitApplication.TabIndex = 1;
-            this.QuitApplication.Text = "Quit Application";
-            this.QuitApplication.UseVisualStyleBackColor = true;
-            this.QuitApplication.Click += new System.EventHandler(this.Quit_Click);
-            // 
-            // textBox
-            // 
-            this.textBox.Location = new System.Drawing.Point(6, 256);
-            this.textBox.Multiline = true;
-            this.textBox.Name = "textBox";
-            this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox.Size = new System.Drawing.Size(380, 200);
-            this.textBox.TabIndex = 2;
-            // 
-            // label_leftView
-            // 
-            this.label_leftView.AutoSize = true;
-            this.label_leftView.BackColor = System.Drawing.SystemColors.Control;
-            this.label_leftView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_leftView.Location = new System.Drawing.Point(106, 6);
-            this.label_leftView.Name = "label_leftView";
-            this.label_leftView.Size = new System.Drawing.Size(60, 13);
-            this.label_leftView.TabIndex = 6;
-            this.label_leftView.Text = "Left View";
-            // 
-            // label_rightView
-            // 
-            this.label_rightView.AutoSize = true;
-            this.label_rightView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_rightView.Location = new System.Drawing.Point(271, 6);
-            this.label_rightView.Name = "label_rightView";
-            this.label_rightView.Size = new System.Drawing.Size(68, 13);
-            this.label_rightView.TabIndex = 7;
-            this.label_rightView.Text = "Right View";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "View Manipulation";
-            // 
-            // rbPanel_leftView
-            // 
-            this.rbPanel_leftView.Controls.Add(this.rb_leftViewLeftCam);
-            this.rbPanel_leftView.Controls.Add(this.rb_leftViewNoCam);
-            this.rbPanel_leftView.Controls.Add(this.rb_leftViewRightCam);
-            this.rbPanel_leftView.Location = new System.Drawing.Point(6, 56);
-            this.rbPanel_leftView.Name = "rbPanel_leftView";
-            this.rbPanel_leftView.Size = new System.Drawing.Size(150, 94);
-            this.rbPanel_leftView.TabIndex = 10;
-            // 
-            // rb_leftViewLeftCam
-            // 
-            this.rb_leftViewLeftCam.AutoSize = true;
-            this.rb_leftViewLeftCam.Checked = true;
-            this.rb_leftViewLeftCam.Location = new System.Drawing.Point(65, 20);
-            this.rb_leftViewLeftCam.Name = "rb_leftViewLeftCam";
-            this.rb_leftViewLeftCam.Size = new System.Drawing.Size(82, 17);
-            this.rb_leftViewLeftCam.TabIndex = 2;
-            this.rb_leftViewLeftCam.TabStop = true;
-            this.rb_leftViewLeftCam.Text = "Left Camera";
-            this.rb_leftViewLeftCam.UseVisualStyleBackColor = true;
-            this.rb_leftViewLeftCam.CheckedChanged += new System.EventHandler(this.rb_leftViewLeftCam_CheckedChanged);
-            // 
-            // rb_leftViewNoCam
-            // 
-            this.rb_leftViewNoCam.AutoSize = true;
-            this.rb_leftViewNoCam.Location = new System.Drawing.Point(65, 67);
-            this.rb_leftViewNoCam.Name = "rb_leftViewNoCam";
-            this.rb_leftViewNoCam.Size = new System.Drawing.Size(78, 17);
-            this.rb_leftViewNoCam.TabIndex = 1;
-            this.rb_leftViewNoCam.Text = "No Camera";
-            this.rb_leftViewNoCam.UseVisualStyleBackColor = true;
-            this.rb_leftViewNoCam.CheckedChanged += new System.EventHandler(this.rb_leftViewNoCam_CheckedChanged);
-            // 
-            // rb_leftViewRightCam
-            // 
-            this.rb_leftViewRightCam.AutoSize = true;
-            this.rb_leftViewRightCam.Location = new System.Drawing.Point(65, 43);
-            this.rb_leftViewRightCam.Name = "rb_leftViewRightCam";
-            this.rb_leftViewRightCam.Size = new System.Drawing.Size(89, 17);
-            this.rb_leftViewRightCam.TabIndex = 0;
-            this.rb_leftViewRightCam.Text = "Right Camera";
-            this.rb_leftViewRightCam.UseVisualStyleBackColor = true;
-            this.rb_leftViewRightCam.CheckedChanged += new System.EventHandler(this.rb_leftViewRightCam_CheckedChanged);
-            // 
-            // cb_leftViewMirror
-            // 
-            this.cb_leftViewMirror.AutoSize = true;
-            this.cb_leftViewMirror.Location = new System.Drawing.Point(71, 156);
-            this.cb_leftViewMirror.Name = "cb_leftViewMirror";
-            this.cb_leftViewMirror.Size = new System.Drawing.Size(52, 17);
-            this.cb_leftViewMirror.TabIndex = 11;
-            this.cb_leftViewMirror.Text = "Mirror";
-            this.cb_leftViewMirror.UseVisualStyleBackColor = true;
-            this.cb_leftViewMirror.CheckedChanged += new System.EventHandler(this.cb_leftViewMirror_CheckedChanged);
-            // 
-            // rbPanel_rightView
-            // 
-            this.rbPanel_rightView.Controls.Add(this.rb_rightViewNoCam);
-            this.rbPanel_rightView.Controls.Add(this.rb_rightViewRightCam);
-            this.rbPanel_rightView.Controls.Add(this.rb_rightViewLeftCam);
-            this.rbPanel_rightView.Location = new System.Drawing.Point(231, 56);
-            this.rbPanel_rightView.Name = "rbPanel_rightView";
-            this.rbPanel_rightView.Size = new System.Drawing.Size(152, 94);
-            this.rbPanel_rightView.TabIndex = 12;
-            // 
-            // rb_rightViewNoCam
-            // 
-            this.rb_rightViewNoCam.AutoSize = true;
-            this.rb_rightViewNoCam.Location = new System.Drawing.Point(0, 67);
-            this.rb_rightViewNoCam.Name = "rb_rightViewNoCam";
-            this.rb_rightViewNoCam.Size = new System.Drawing.Size(78, 17);
-            this.rb_rightViewNoCam.TabIndex = 2;
-            this.rb_rightViewNoCam.Text = "No Camera";
-            this.rb_rightViewNoCam.UseVisualStyleBackColor = true;
-            this.rb_rightViewNoCam.CheckedChanged += new System.EventHandler(this.rb_rightViewNoCam_CheckedChanged);
-            // 
-            // rb_rightViewRightCam
-            // 
-            this.rb_rightViewRightCam.AutoSize = true;
-            this.rb_rightViewRightCam.Checked = true;
-            this.rb_rightViewRightCam.Location = new System.Drawing.Point(0, 43);
-            this.rb_rightViewRightCam.Name = "rb_rightViewRightCam";
-            this.rb_rightViewRightCam.Size = new System.Drawing.Size(89, 17);
-            this.rb_rightViewRightCam.TabIndex = 1;
-            this.rb_rightViewRightCam.TabStop = true;
-            this.rb_rightViewRightCam.Text = "Right Camera";
-            this.rb_rightViewRightCam.UseVisualStyleBackColor = true;
-            this.rb_rightViewRightCam.CheckedChanged += new System.EventHandler(this.rb_rightViewRightCam_CheckedChanged);
-            // 
-            // rb_rightViewLeftCam
-            // 
-            this.rb_rightViewLeftCam.AutoSize = true;
-            this.rb_rightViewLeftCam.Location = new System.Drawing.Point(0, 20);
-            this.rb_rightViewLeftCam.Name = "rb_rightViewLeftCam";
-            this.rb_rightViewLeftCam.Size = new System.Drawing.Size(82, 17);
-            this.rb_rightViewLeftCam.TabIndex = 0;
-            this.rb_rightViewLeftCam.Text = "Left Camera";
-            this.rb_rightViewLeftCam.UseVisualStyleBackColor = true;
-            this.rb_rightViewLeftCam.CheckedChanged += new System.EventHandler(this.rb_rightViewLeftCam_CheckedChanged);
-            // 
-            // cb_rightViewMirror
-            // 
-            this.cb_rightViewMirror.AutoSize = true;
-            this.cb_rightViewMirror.Location = new System.Drawing.Point(231, 157);
-            this.cb_rightViewMirror.Name = "cb_rightViewMirror";
-            this.cb_rightViewMirror.Size = new System.Drawing.Size(52, 17);
-            this.cb_rightViewMirror.TabIndex = 13;
-            this.cb_rightViewMirror.Text = "Mirror";
-            this.cb_rightViewMirror.UseVisualStyleBackColor = true;
-            this.cb_rightViewMirror.CheckedChanged += new System.EventHandler(this.cb_rightViewMirror_CheckedChanged);
-            // 
-            // pb_leftViewLeftHand
-            // 
-            this.pb_leftViewLeftHand.Image = ((System.Drawing.Image)(resources.GetObject("pb_leftViewLeftHand.Image")));
-            this.pb_leftViewLeftHand.Location = new System.Drawing.Point(45, 179);
-            this.pb_leftViewLeftHand.Name = "pb_leftViewLeftHand";
-            this.pb_leftViewLeftHand.Size = new System.Drawing.Size(68, 68);
-            this.pb_leftViewLeftHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_leftViewLeftHand.TabIndex = 14;
-            this.pb_leftViewLeftHand.TabStop = false;
-            // 
-            // pb_leftViewRightHand
-            // 
-            this.pb_leftViewRightHand.Image = ((System.Drawing.Image)(resources.GetObject("pb_leftViewRightHand.Image")));
-            this.pb_leftViewRightHand.Location = new System.Drawing.Point(119, 179);
-            this.pb_leftViewRightHand.Name = "pb_leftViewRightHand";
-            this.pb_leftViewRightHand.Size = new System.Drawing.Size(68, 68);
-            this.pb_leftViewRightHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_leftViewRightHand.TabIndex = 15;
-            this.pb_leftViewRightHand.TabStop = false;
-            this.pb_leftViewRightHand.Visible = false;
-            // 
-            // pb_rightViewLeftHand
-            // 
-            this.pb_rightViewLeftHand.Image = ((System.Drawing.Image)(resources.GetObject("pb_rightViewLeftHand.Image")));
-            this.pb_rightViewLeftHand.Location = new System.Drawing.Point(231, 179);
-            this.pb_rightViewLeftHand.Name = "pb_rightViewLeftHand";
-            this.pb_rightViewLeftHand.Size = new System.Drawing.Size(68, 68);
-            this.pb_rightViewLeftHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_rightViewLeftHand.TabIndex = 16;
-            this.pb_rightViewLeftHand.TabStop = false;
-            this.pb_rightViewLeftHand.Visible = false;
-            // 
-            // pb_rightViewRightHand
-            // 
-            this.pb_rightViewRightHand.Image = ((System.Drawing.Image)(resources.GetObject("pb_rightViewRightHand.Image")));
-            this.pb_rightViewRightHand.Location = new System.Drawing.Point(305, 179);
-            this.pb_rightViewRightHand.Name = "pb_rightViewRightHand";
-            this.pb_rightViewRightHand.Size = new System.Drawing.Size(68, 68);
-            this.pb_rightViewRightHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_rightViewRightHand.TabIndex = 17;
-            this.pb_rightViewRightHand.TabStop = false;
-            // 
-            // pb_leftViewLeftHandMirror
-            // 
-            this.pb_leftViewLeftHandMirror.Image = ((System.Drawing.Image)(resources.GetObject("pb_leftViewLeftHandMirror.Image")));
-            this.pb_leftViewLeftHandMirror.Location = new System.Drawing.Point(45, 179);
-            this.pb_leftViewLeftHandMirror.Name = "pb_leftViewLeftHandMirror";
-            this.pb_leftViewLeftHandMirror.Size = new System.Drawing.Size(68, 68);
-            this.pb_leftViewLeftHandMirror.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_leftViewLeftHandMirror.TabIndex = 18;
-            this.pb_leftViewLeftHandMirror.TabStop = false;
-            this.pb_leftViewLeftHandMirror.Visible = false;
-            // 
-            // pb_leftViewRightHandMirror
-            // 
-            this.pb_leftViewRightHandMirror.Image = ((System.Drawing.Image)(resources.GetObject("pb_leftViewRightHandMirror.Image")));
-            this.pb_leftViewRightHandMirror.Location = new System.Drawing.Point(119, 179);
-            this.pb_leftViewRightHandMirror.Name = "pb_leftViewRightHandMirror";
-            this.pb_leftViewRightHandMirror.Size = new System.Drawing.Size(68, 68);
-            this.pb_leftViewRightHandMirror.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_leftViewRightHandMirror.TabIndex = 19;
-            this.pb_leftViewRightHandMirror.TabStop = false;
-            this.pb_leftViewRightHandMirror.Visible = false;
-            // 
-            // pb_rightViewRightHandMirror
-            // 
-            this.pb_rightViewRightHandMirror.Image = ((System.Drawing.Image)(resources.GetObject("pb_rightViewRightHandMirror.Image")));
-            this.pb_rightViewRightHandMirror.Location = new System.Drawing.Point(305, 179);
-            this.pb_rightViewRightHandMirror.Name = "pb_rightViewRightHandMirror";
-            this.pb_rightViewRightHandMirror.Size = new System.Drawing.Size(68, 68);
-            this.pb_rightViewRightHandMirror.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_rightViewRightHandMirror.TabIndex = 20;
-            this.pb_rightViewRightHandMirror.TabStop = false;
-            this.pb_rightViewRightHandMirror.Visible = false;
-            // 
-            // pb_rightViewLeftHandMirror
-            // 
-            this.pb_rightViewLeftHandMirror.Image = ((System.Drawing.Image)(resources.GetObject("pb_rightViewLeftHandMirror.Image")));
-            this.pb_rightViewLeftHandMirror.Location = new System.Drawing.Point(231, 179);
-            this.pb_rightViewLeftHandMirror.Name = "pb_rightViewLeftHandMirror";
-            this.pb_rightViewLeftHandMirror.Size = new System.Drawing.Size(68, 68);
-            this.pb_rightViewLeftHandMirror.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_rightViewLeftHandMirror.TabIndex = 21;
-            this.pb_rightViewLeftHandMirror.TabStop = false;
-            this.pb_rightViewLeftHandMirror.Visible = false;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(3, 7);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(479, 515);
-            this.tabControl1.TabIndex = 22;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.cb_rightViewMirror);
-            this.tabPage1.Controls.Add(this.rbPanel_rightView);
-            this.tabPage1.Controls.Add(this.cb_leftViewMirror);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.label_rightView);
-            this.tabPage1.Controls.Add(this.label_leftView);
-            this.tabPage1.Controls.Add(this.textBox);
-            this.tabPage1.Controls.Add(this.Apply);
-            this.tabPage1.Controls.Add(this.rbPanel_leftView);
-            this.tabPage1.Controls.Add(this.pb_leftViewRightHand);
-            this.tabPage1.Controls.Add(this.pb_leftViewLeftHand);
-            this.tabPage1.Controls.Add(this.pb_leftViewLeftHandMirror);
-            this.tabPage1.Controls.Add(this.pb_leftViewRightHandMirror);
-            this.tabPage1.Controls.Add(this.pb_rightViewLeftHand);
-            this.tabPage1.Controls.Add(this.pb_rightViewLeftHandMirror);
-            this.tabPage1.Controls.Add(this.pb_rightViewRightHand);
-            this.tabPage1.Controls.Add(this.pb_rightViewRightHandMirror);
-            this.tabPage1.Controls.Add(this.shapeContainer1);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(471, 489);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Views";
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(3, 3);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape3,
-            this.lineShape2,
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(465, 483);
-            this.shapeContainer1.TabIndex = 22;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 210;
-            this.lineShape3.X2 = 383;
-            this.lineShape3.Y1 = 25;
-            this.lineShape3.Y2 = 25;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 3;
-            this.lineShape2.X2 = 200;
-            this.lineShape2.Y1 = 25;
-            this.lineShape2.Y2 = 25;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 205;
-            this.lineShape1.X2 = 205;
-            this.lineShape1.Y1 = 3;
-            this.lineShape1.Y2 = 245;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.Restart);
-            this.tabPage2.Controls.Add(this.Pause);
-            this.tabPage2.Controls.Add(this.warning);
-            this.tabPage2.Controls.Add(this.StartGame);
-            this.tabPage2.Controls.Add(this.comboBox_gamesList);
-            this.tabPage2.Controls.Add(this.label_selection);
-            this.tabPage2.Controls.Add(this.label_appSelection);
-            this.tabPage2.Controls.Add(this.shapeContainer2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(471, 489);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Applications";
-            // 
-            // Restart
-            // 
-            this.Restart.Location = new System.Drawing.Point(198, 110);
-            this.Restart.Name = "Restart";
-            this.Restart.Size = new System.Drawing.Size(90, 23);
-            this.Restart.TabIndex = 7;
-            this.Restart.Text = "Restart Game";
-            this.Restart.UseVisualStyleBackColor = true;
-            this.Restart.Click += new System.EventHandler(this.Restart_Click);
-            // 
-            // Pause
-            // 
-            this.Pause.Location = new System.Drawing.Point(92, 110);
-            this.Pause.Name = "Pause";
-            this.Pause.Size = new System.Drawing.Size(90, 23);
-            this.Pause.TabIndex = 6;
-            this.Pause.Text = "Resume";
-            this.Pause.UseVisualStyleBackColor = true;
-            this.Pause.Click += new System.EventHandler(this.Pause_Click);
-            // 
-            // warning
-            // 
-            this.warning.AutoSize = true;
-            this.warning.Location = new System.Drawing.Point(30, 155);
-            this.warning.Name = "warning";
-            this.warning.Size = new System.Drawing.Size(0, 13);
-            this.warning.TabIndex = 5;
-            // 
-            // StartGame
-            // 
-            this.StartGame.Location = new System.Drawing.Point(294, 110);
-            this.StartGame.Name = "StartGame";
-            this.StartGame.Size = new System.Drawing.Size(90, 23);
-            this.StartGame.TabIndex = 4;
-            this.StartGame.Text = "Start Game";
-            this.StartGame.UseVisualStyleBackColor = true;
-            this.StartGame.Click += new System.EventHandler(this.StartGame_Click);
-            // 
-            // comboBox_gamesList
-            // 
-            this.comboBox_gamesList.FormattingEnabled = true;
-            this.comboBox_gamesList.Items.AddRange(new object[] {
-            "TheraMem"});
-            this.comboBox_gamesList.Location = new System.Drawing.Point(92, 83);
-            this.comboBox_gamesList.Name = "comboBox_gamesList";
-            this.comboBox_gamesList.Size = new System.Drawing.Size(292, 21);
-            this.comboBox_gamesList.TabIndex = 3;
-            this.comboBox_gamesList.SelectedIndexChanged += new System.EventHandler(this.comboBox_gamesList_SelectedIndexChanged);
-            // 
-            // label_selection
-            // 
-            this.label_selection.AutoSize = true;
-            this.label_selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_selection.Location = new System.Drawing.Point(22, 86);
-            this.label_selection.Name = "label_selection";
-            this.label_selection.Size = new System.Drawing.Size(64, 13);
-            this.label_selection.TabIndex = 2;
-            this.label_selection.Text = "Selection:";
-            // 
-            // label_appSelection
-            // 
-            this.label_appSelection.AutoSize = true;
-            this.label_appSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_appSelection.Location = new System.Drawing.Point(6, 22);
-            this.label_appSelection.Name = "label_appSelection";
-            this.label_appSelection.Size = new System.Drawing.Size(127, 13);
-            this.label_appSelection.TabIndex = 0;
-            this.label_appSelection.Text = "Application Selection";
-            // 
-            // shapeContainer2
-            // 
-            this.shapeContainer2.Location = new System.Drawing.Point(3, 3);
-            this.shapeContainer2.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer2.Name = "shapeContainer2";
-            this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape5,
-            this.lineShape4});
-            this.shapeContainer2.Size = new System.Drawing.Size(465, 483);
-            this.shapeContainer2.TabIndex = 1;
-            this.shapeContainer2.TabStop = false;
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.Name = "lineShape5";
-            this.lineShape5.X1 = 30;
-            this.lineShape5.X2 = 361;
-            this.lineShape5.Y1 = 178;
-            this.lineShape5.Y2 = 179;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 6;
-            this.lineShape4.X2 = 383;
-            this.lineShape4.Y1 = 40;
-            this.lineShape4.Y2 = 40;
+            // button_done
+            // 
+            this.button_done.Location = new System.Drawing.Point(378, 530);
+            this.button_done.Name = "button_done";
+            this.button_done.Size = new System.Drawing.Size(90, 23);
+            this.button_done.TabIndex = 1;
+            this.button_done.Text = "Done";
+            this.button_done.UseVisualStyleBackColor = true;
+            this.button_done.Click += new System.EventHandler(this.Quit_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(468, 489);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Movement";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -613,7 +175,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(471, 489);
+            this.tabPage3.Size = new System.Drawing.Size(468, 489);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Camera";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1193,44 +755,371 @@
             this.label_leftCamera.TabIndex = 37;
             this.label_leftCamera.Text = "Left Camera";
             // 
-            // tabPage4
+            // tabPage1
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(471, 489);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Views";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage1.Controls.Add(this.cb_applyChangesImmediately);
+            this.tabPage1.Controls.Add(this.cb_rightViewMirror);
+            this.tabPage1.Controls.Add(this.rbPanel_rightView);
+            this.tabPage1.Controls.Add(this.cb_leftViewMirror);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label_rightView);
+            this.tabPage1.Controls.Add(this.label_leftView);
+            this.tabPage1.Controls.Add(this.textBox);
+            this.tabPage1.Controls.Add(this.Apply);
+            this.tabPage1.Controls.Add(this.rbPanel_leftView);
+            this.tabPage1.Controls.Add(this.pb_leftViewRightHand);
+            this.tabPage1.Controls.Add(this.pb_leftViewLeftHand);
+            this.tabPage1.Controls.Add(this.pb_leftViewLeftHandMirror);
+            this.tabPage1.Controls.Add(this.pb_leftViewRightHandMirror);
+            this.tabPage1.Controls.Add(this.pb_rightViewLeftHand);
+            this.tabPage1.Controls.Add(this.pb_rightViewLeftHandMirror);
+            this.tabPage1.Controls.Add(this.pb_rightViewRightHand);
+            this.tabPage1.Controls.Add(this.pb_rightViewRightHandMirror);
+            this.tabPage1.Controls.Add(this.shapeContainer1);
+            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(468, 489);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Views";
+            // 
+            // cb_applyChangesImmediately
+            // 
+            this.cb_applyChangesImmediately.AutoSize = true;
+            this.cb_applyChangesImmediately.Location = new System.Drawing.Point(134, 466);
+            this.cb_applyChangesImmediately.Name = "cb_applyChangesImmediately";
+            this.cb_applyChangesImmediately.Size = new System.Drawing.Size(155, 17);
+            this.cb_applyChangesImmediately.TabIndex = 23;
+            this.cb_applyChangesImmediately.Text = "Apply Changes Immediately";
+            this.cb_applyChangesImmediately.UseVisualStyleBackColor = true;
+            this.cb_applyChangesImmediately.CheckedChanged += new System.EventHandler(this.cb_applyChangesImmediately_CheckedChanged);
+            // 
+            // cb_rightViewMirror
+            // 
+            this.cb_rightViewMirror.AutoSize = true;
+            this.cb_rightViewMirror.Location = new System.Drawing.Point(231, 157);
+            this.cb_rightViewMirror.Name = "cb_rightViewMirror";
+            this.cb_rightViewMirror.Size = new System.Drawing.Size(52, 17);
+            this.cb_rightViewMirror.TabIndex = 13;
+            this.cb_rightViewMirror.Text = "Mirror";
+            this.cb_rightViewMirror.UseVisualStyleBackColor = true;
+            this.cb_rightViewMirror.CheckedChanged += new System.EventHandler(this.cb_rightViewMirror_CheckedChanged);
+            // 
+            // rbPanel_rightView
+            // 
+            this.rbPanel_rightView.Controls.Add(this.rb_rightViewNoCam);
+            this.rbPanel_rightView.Controls.Add(this.rb_rightViewRightCam);
+            this.rbPanel_rightView.Controls.Add(this.rb_rightViewLeftCam);
+            this.rbPanel_rightView.Location = new System.Drawing.Point(231, 56);
+            this.rbPanel_rightView.Name = "rbPanel_rightView";
+            this.rbPanel_rightView.Size = new System.Drawing.Size(152, 94);
+            this.rbPanel_rightView.TabIndex = 12;
+            // 
+            // rb_rightViewNoCam
+            // 
+            this.rb_rightViewNoCam.AutoSize = true;
+            this.rb_rightViewNoCam.Location = new System.Drawing.Point(0, 67);
+            this.rb_rightViewNoCam.Name = "rb_rightViewNoCam";
+            this.rb_rightViewNoCam.Size = new System.Drawing.Size(78, 17);
+            this.rb_rightViewNoCam.TabIndex = 2;
+            this.rb_rightViewNoCam.Text = "No Camera";
+            this.rb_rightViewNoCam.UseVisualStyleBackColor = true;
+            this.rb_rightViewNoCam.CheckedChanged += new System.EventHandler(this.rb_rightViewNoCam_CheckedChanged);
+            // 
+            // rb_rightViewRightCam
+            // 
+            this.rb_rightViewRightCam.AutoSize = true;
+            this.rb_rightViewRightCam.Checked = true;
+            this.rb_rightViewRightCam.Location = new System.Drawing.Point(0, 43);
+            this.rb_rightViewRightCam.Name = "rb_rightViewRightCam";
+            this.rb_rightViewRightCam.Size = new System.Drawing.Size(89, 17);
+            this.rb_rightViewRightCam.TabIndex = 1;
+            this.rb_rightViewRightCam.TabStop = true;
+            this.rb_rightViewRightCam.Text = "Right Camera";
+            this.rb_rightViewRightCam.UseVisualStyleBackColor = true;
+            this.rb_rightViewRightCam.CheckedChanged += new System.EventHandler(this.rb_rightViewRightCam_CheckedChanged);
+            // 
+            // rb_rightViewLeftCam
+            // 
+            this.rb_rightViewLeftCam.AutoSize = true;
+            this.rb_rightViewLeftCam.Location = new System.Drawing.Point(0, 20);
+            this.rb_rightViewLeftCam.Name = "rb_rightViewLeftCam";
+            this.rb_rightViewLeftCam.Size = new System.Drawing.Size(82, 17);
+            this.rb_rightViewLeftCam.TabIndex = 0;
+            this.rb_rightViewLeftCam.Text = "Left Camera";
+            this.rb_rightViewLeftCam.UseVisualStyleBackColor = true;
+            this.rb_rightViewLeftCam.CheckedChanged += new System.EventHandler(this.rb_rightViewLeftCam_CheckedChanged);
+            // 
+            // cb_leftViewMirror
+            // 
+            this.cb_leftViewMirror.AutoSize = true;
+            this.cb_leftViewMirror.Location = new System.Drawing.Point(71, 156);
+            this.cb_leftViewMirror.Name = "cb_leftViewMirror";
+            this.cb_leftViewMirror.Size = new System.Drawing.Size(52, 17);
+            this.cb_leftViewMirror.TabIndex = 11;
+            this.cb_leftViewMirror.Text = "Mirror";
+            this.cb_leftViewMirror.UseVisualStyleBackColor = true;
+            this.cb_leftViewMirror.CheckedChanged += new System.EventHandler(this.cb_leftViewMirror_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "View Manipulation";
+            // 
+            // label_rightView
+            // 
+            this.label_rightView.AutoSize = true;
+            this.label_rightView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_rightView.Location = new System.Drawing.Point(271, 6);
+            this.label_rightView.Name = "label_rightView";
+            this.label_rightView.Size = new System.Drawing.Size(68, 13);
+            this.label_rightView.TabIndex = 7;
+            this.label_rightView.Text = "Right View";
+            // 
+            // label_leftView
+            // 
+            this.label_leftView.AutoSize = true;
+            this.label_leftView.BackColor = System.Drawing.SystemColors.Control;
+            this.label_leftView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_leftView.Location = new System.Drawing.Point(106, 6);
+            this.label_leftView.Name = "label_leftView";
+            this.label_leftView.Size = new System.Drawing.Size(60, 13);
+            this.label_leftView.TabIndex = 6;
+            this.label_leftView.Text = "Left View";
+            // 
+            // textBox
+            // 
+            this.textBox.Location = new System.Drawing.Point(6, 256);
+            this.textBox.Multiline = true;
+            this.textBox.Name = "textBox";
+            this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox.Size = new System.Drawing.Size(380, 200);
+            this.textBox.TabIndex = 2;
+            // 
+            // Apply
+            // 
+            this.Apply.Location = new System.Drawing.Point(295, 462);
+            this.Apply.Name = "Apply";
+            this.Apply.Size = new System.Drawing.Size(90, 23);
+            this.Apply.TabIndex = 0;
+            this.Apply.Text = "Apply";
+            this.Apply.UseVisualStyleBackColor = true;
+            this.Apply.Click += new System.EventHandler(this.Apply_Click);
+            // 
+            // rbPanel_leftView
+            // 
+            this.rbPanel_leftView.Controls.Add(this.rb_leftViewLeftCam);
+            this.rbPanel_leftView.Controls.Add(this.rb_leftViewNoCam);
+            this.rbPanel_leftView.Controls.Add(this.rb_leftViewRightCam);
+            this.rbPanel_leftView.Location = new System.Drawing.Point(6, 56);
+            this.rbPanel_leftView.Name = "rbPanel_leftView";
+            this.rbPanel_leftView.Size = new System.Drawing.Size(150, 94);
+            this.rbPanel_leftView.TabIndex = 10;
+            // 
+            // rb_leftViewLeftCam
+            // 
+            this.rb_leftViewLeftCam.AutoSize = true;
+            this.rb_leftViewLeftCam.Checked = true;
+            this.rb_leftViewLeftCam.Location = new System.Drawing.Point(65, 20);
+            this.rb_leftViewLeftCam.Name = "rb_leftViewLeftCam";
+            this.rb_leftViewLeftCam.Size = new System.Drawing.Size(82, 17);
+            this.rb_leftViewLeftCam.TabIndex = 2;
+            this.rb_leftViewLeftCam.TabStop = true;
+            this.rb_leftViewLeftCam.Text = "Left Camera";
+            this.rb_leftViewLeftCam.UseVisualStyleBackColor = true;
+            this.rb_leftViewLeftCam.CheckedChanged += new System.EventHandler(this.rb_leftViewLeftCam_CheckedChanged);
+            // 
+            // rb_leftViewNoCam
+            // 
+            this.rb_leftViewNoCam.AutoSize = true;
+            this.rb_leftViewNoCam.Location = new System.Drawing.Point(65, 67);
+            this.rb_leftViewNoCam.Name = "rb_leftViewNoCam";
+            this.rb_leftViewNoCam.Size = new System.Drawing.Size(78, 17);
+            this.rb_leftViewNoCam.TabIndex = 1;
+            this.rb_leftViewNoCam.Text = "No Camera";
+            this.rb_leftViewNoCam.UseVisualStyleBackColor = true;
+            this.rb_leftViewNoCam.CheckedChanged += new System.EventHandler(this.rb_leftViewNoCam_CheckedChanged);
+            // 
+            // rb_leftViewRightCam
+            // 
+            this.rb_leftViewRightCam.AutoSize = true;
+            this.rb_leftViewRightCam.Location = new System.Drawing.Point(65, 43);
+            this.rb_leftViewRightCam.Name = "rb_leftViewRightCam";
+            this.rb_leftViewRightCam.Size = new System.Drawing.Size(89, 17);
+            this.rb_leftViewRightCam.TabIndex = 0;
+            this.rb_leftViewRightCam.Text = "Right Camera";
+            this.rb_leftViewRightCam.UseVisualStyleBackColor = true;
+            this.rb_leftViewRightCam.CheckedChanged += new System.EventHandler(this.rb_leftViewRightCam_CheckedChanged);
+            // 
+            // pb_leftViewRightHand
+            // 
+            this.pb_leftViewRightHand.Image = ((System.Drawing.Image)(resources.GetObject("pb_leftViewRightHand.Image")));
+            this.pb_leftViewRightHand.Location = new System.Drawing.Point(119, 179);
+            this.pb_leftViewRightHand.Name = "pb_leftViewRightHand";
+            this.pb_leftViewRightHand.Size = new System.Drawing.Size(68, 68);
+            this.pb_leftViewRightHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_leftViewRightHand.TabIndex = 15;
+            this.pb_leftViewRightHand.TabStop = false;
+            this.pb_leftViewRightHand.Visible = false;
+            // 
+            // pb_leftViewLeftHand
+            // 
+            this.pb_leftViewLeftHand.Image = ((System.Drawing.Image)(resources.GetObject("pb_leftViewLeftHand.Image")));
+            this.pb_leftViewLeftHand.Location = new System.Drawing.Point(45, 179);
+            this.pb_leftViewLeftHand.Name = "pb_leftViewLeftHand";
+            this.pb_leftViewLeftHand.Size = new System.Drawing.Size(68, 68);
+            this.pb_leftViewLeftHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_leftViewLeftHand.TabIndex = 14;
+            this.pb_leftViewLeftHand.TabStop = false;
+            // 
+            // pb_leftViewLeftHandMirror
+            // 
+            this.pb_leftViewLeftHandMirror.Image = ((System.Drawing.Image)(resources.GetObject("pb_leftViewLeftHandMirror.Image")));
+            this.pb_leftViewLeftHandMirror.Location = new System.Drawing.Point(45, 179);
+            this.pb_leftViewLeftHandMirror.Name = "pb_leftViewLeftHandMirror";
+            this.pb_leftViewLeftHandMirror.Size = new System.Drawing.Size(68, 68);
+            this.pb_leftViewLeftHandMirror.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_leftViewLeftHandMirror.TabIndex = 18;
+            this.pb_leftViewLeftHandMirror.TabStop = false;
+            this.pb_leftViewLeftHandMirror.Visible = false;
+            // 
+            // pb_leftViewRightHandMirror
+            // 
+            this.pb_leftViewRightHandMirror.Image = ((System.Drawing.Image)(resources.GetObject("pb_leftViewRightHandMirror.Image")));
+            this.pb_leftViewRightHandMirror.Location = new System.Drawing.Point(119, 179);
+            this.pb_leftViewRightHandMirror.Name = "pb_leftViewRightHandMirror";
+            this.pb_leftViewRightHandMirror.Size = new System.Drawing.Size(68, 68);
+            this.pb_leftViewRightHandMirror.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_leftViewRightHandMirror.TabIndex = 19;
+            this.pb_leftViewRightHandMirror.TabStop = false;
+            this.pb_leftViewRightHandMirror.Visible = false;
+            // 
+            // pb_rightViewLeftHand
+            // 
+            this.pb_rightViewLeftHand.Image = ((System.Drawing.Image)(resources.GetObject("pb_rightViewLeftHand.Image")));
+            this.pb_rightViewLeftHand.Location = new System.Drawing.Point(231, 179);
+            this.pb_rightViewLeftHand.Name = "pb_rightViewLeftHand";
+            this.pb_rightViewLeftHand.Size = new System.Drawing.Size(68, 68);
+            this.pb_rightViewLeftHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_rightViewLeftHand.TabIndex = 16;
+            this.pb_rightViewLeftHand.TabStop = false;
+            this.pb_rightViewLeftHand.Visible = false;
+            // 
+            // pb_rightViewLeftHandMirror
+            // 
+            this.pb_rightViewLeftHandMirror.Image = ((System.Drawing.Image)(resources.GetObject("pb_rightViewLeftHandMirror.Image")));
+            this.pb_rightViewLeftHandMirror.Location = new System.Drawing.Point(231, 179);
+            this.pb_rightViewLeftHandMirror.Name = "pb_rightViewLeftHandMirror";
+            this.pb_rightViewLeftHandMirror.Size = new System.Drawing.Size(68, 68);
+            this.pb_rightViewLeftHandMirror.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_rightViewLeftHandMirror.TabIndex = 21;
+            this.pb_rightViewLeftHandMirror.TabStop = false;
+            this.pb_rightViewLeftHandMirror.Visible = false;
+            // 
+            // pb_rightViewRightHand
+            // 
+            this.pb_rightViewRightHand.Image = ((System.Drawing.Image)(resources.GetObject("pb_rightViewRightHand.Image")));
+            this.pb_rightViewRightHand.Location = new System.Drawing.Point(305, 179);
+            this.pb_rightViewRightHand.Name = "pb_rightViewRightHand";
+            this.pb_rightViewRightHand.Size = new System.Drawing.Size(68, 68);
+            this.pb_rightViewRightHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_rightViewRightHand.TabIndex = 17;
+            this.pb_rightViewRightHand.TabStop = false;
+            // 
+            // pb_rightViewRightHandMirror
+            // 
+            this.pb_rightViewRightHandMirror.Image = ((System.Drawing.Image)(resources.GetObject("pb_rightViewRightHandMirror.Image")));
+            this.pb_rightViewRightHandMirror.Location = new System.Drawing.Point(305, 179);
+            this.pb_rightViewRightHandMirror.Name = "pb_rightViewRightHandMirror";
+            this.pb_rightViewRightHandMirror.Size = new System.Drawing.Size(68, 68);
+            this.pb_rightViewRightHandMirror.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_rightViewRightHandMirror.TabIndex = 20;
+            this.pb_rightViewRightHandMirror.TabStop = false;
+            this.pb_rightViewRightHandMirror.Visible = false;
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(3, 3);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape3,
+            this.lineShape2,
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(462, 483);
+            this.shapeContainer1.TabIndex = 22;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 210;
+            this.lineShape3.X2 = 383;
+            this.lineShape3.Y1 = 25;
+            this.lineShape3.Y2 = 25;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 3;
+            this.lineShape2.X2 = 200;
+            this.lineShape2.Y1 = 25;
+            this.lineShape2.Y2 = 25;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 205;
+            this.lineShape1.X2 = 205;
+            this.lineShape1.Y1 = 3;
+            this.lineShape1.Y2 = 245;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Location = new System.Drawing.Point(3, 7);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(476, 515);
+            this.tabControl1.TabIndex = 22;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.lineShape5.Name = "lineShape5";
+            this.lineShape5.X1 = 30;
+            this.lineShape5.X2 = 361;
+            this.lineShape5.Y1 = 178;
+            this.lineShape5.Y2 = 179;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 6;
+            this.lineShape4.X2 = 383;
+            this.lineShape4.Y1 = 40;
+            this.lineShape4.Y2 = 40;
             // 
             // Main_Dialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 565);
+            this.ClientSize = new System.Drawing.Size(480, 565);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.QuitApplication);
+            this.Controls.Add(this.button_done);
             this.Location = new System.Drawing.Point(2100, 280);
             this.Name = "Main_Dialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "ART 5.0";
-            this.rbPanel_leftView.ResumeLayout(false);
-            this.rbPanel_leftView.PerformLayout();
-            this.rbPanel_rightView.ResumeLayout(false);
-            this.rbPanel_rightView.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewLeftHand)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewRightHand)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewLeftHand)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewRightHand)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewLeftHandMirror)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewRightHandMirror)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewRightHandMirror)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewLeftHandMirror)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.Text = "ART v5_1";
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1239,54 +1128,41 @@
             this.gboxColourManip.PerformLayout();
             this.gboxLuminanceManip.ResumeLayout(false);
             this.gboxLuminanceManip.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.rbPanel_rightView.ResumeLayout(false);
+            this.rbPanel_rightView.PerformLayout();
+            this.rbPanel_leftView.ResumeLayout(false);
+            this.rbPanel_leftView.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewRightHand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewLeftHand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewLeftHandMirror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_leftViewRightHandMirror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewLeftHand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewLeftHandMirror)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewRightHand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_rightViewRightHandMirror)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Apply;
-        private System.Windows.Forms.Button QuitApplication;
-        private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.Label label_leftView;
-        private System.Windows.Forms.Label label_rightView;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel rbPanel_leftView;
-        private System.Windows.Forms.RadioButton rb_leftViewRightCam;
-        private System.Windows.Forms.RadioButton rb_leftViewNoCam;
-        private System.Windows.Forms.CheckBox cb_leftViewMirror;
-        private System.Windows.Forms.Panel rbPanel_rightView;
-        private System.Windows.Forms.RadioButton rb_rightViewNoCam;
-        private System.Windows.Forms.RadioButton rb_rightViewRightCam;
-        private System.Windows.Forms.RadioButton rb_rightViewLeftCam;
-        private System.Windows.Forms.CheckBox cb_rightViewMirror;
-        private System.Windows.Forms.RadioButton rb_leftViewLeftCam;
-        private System.Windows.Forms.PictureBox pb_leftViewLeftHand;
-        private System.Windows.Forms.PictureBox pb_leftViewRightHand;
-        private System.Windows.Forms.PictureBox pb_rightViewLeftHand;
-        private System.Windows.Forms.PictureBox pb_rightViewRightHand;
-        private System.Windows.Forms.PictureBox pb_leftViewLeftHandMirror;
-        private System.Windows.Forms.PictureBox pb_leftViewRightHandMirror;
-        private System.Windows.Forms.PictureBox pb_rightViewRightHandMirror;
-        private System.Windows.Forms.PictureBox pb_rightViewLeftHandMirror;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage1;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private System.Windows.Forms.Label label_appSelection;
-        private System.Windows.Forms.Label label_selection;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
-        private System.Windows.Forms.ComboBox comboBox_gamesList;
-        private System.Windows.Forms.Button StartGame;
-        private System.Windows.Forms.Label warning;
-        private System.Windows.Forms.Button Pause;
-        private System.Windows.Forms.Button Restart;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
+        private System.Windows.Forms.Button button_done;
+        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button btnAdvOptRight;
+        private System.Windows.Forms.Button btnAdvOptLeft;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.HScrollBar hScrollBar2;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer5;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape8;
         private System.Windows.Forms.GroupBox gboxColourManip;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblHueRight;
@@ -1337,18 +1213,38 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape7;
         private System.Windows.Forms.Label label_rightCamera;
         private System.Windows.Forms.Label label_leftCamera;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
-        private System.Windows.Forms.HScrollBar hScrollBar2;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer5;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape8;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Button btnAdvOptRight;
-        private System.Windows.Forms.Button btnAdvOptLeft;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.CheckBox cb_rightViewMirror;
+        private System.Windows.Forms.Panel rbPanel_rightView;
+        private System.Windows.Forms.RadioButton rb_rightViewNoCam;
+        private System.Windows.Forms.RadioButton rb_rightViewRightCam;
+        private System.Windows.Forms.RadioButton rb_rightViewLeftCam;
+        private System.Windows.Forms.CheckBox cb_leftViewMirror;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_rightView;
+        private System.Windows.Forms.Label label_leftView;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Button Apply;
+        private System.Windows.Forms.Panel rbPanel_leftView;
+        private System.Windows.Forms.RadioButton rb_leftViewLeftCam;
+        private System.Windows.Forms.RadioButton rb_leftViewNoCam;
+        private System.Windows.Forms.RadioButton rb_leftViewRightCam;
+        private System.Windows.Forms.PictureBox pb_leftViewRightHand;
+        private System.Windows.Forms.PictureBox pb_leftViewLeftHand;
+        private System.Windows.Forms.PictureBox pb_leftViewLeftHandMirror;
+        private System.Windows.Forms.PictureBox pb_leftViewRightHandMirror;
+        private System.Windows.Forms.PictureBox pb_rightViewLeftHand;
+        private System.Windows.Forms.PictureBox pb_rightViewLeftHandMirror;
+        private System.Windows.Forms.PictureBox pb_rightViewRightHand;
+        private System.Windows.Forms.PictureBox pb_rightViewRightHandMirror;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
+        private System.Windows.Forms.CheckBox cb_applyChangesImmediately;
     }
 }
 

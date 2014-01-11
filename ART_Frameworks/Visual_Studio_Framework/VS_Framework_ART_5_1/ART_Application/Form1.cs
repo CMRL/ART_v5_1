@@ -32,10 +32,15 @@ namespace ART_Application
     public partial class Main_Dialog : Form
     {
         TcpClient clientSocket;
+        NetworkStream clientStream;
+        StreamReader clientReader;
+        StreamWriter clientWriter;
+
         ArrayList commandArray = new ArrayList();
         bool gameRunning = false;
+        bool applyImmediately = false;
         string gameMode = "";
-
+        string ApplicationCode = "0";
         public string SetGameMode
         {
             get
@@ -72,7 +77,6 @@ namespace ART_Application
         public Main_Dialog()
         {
             Screen[] screens = Screen.AllScreens;
-
             // Start the dialog
             InitializeComponent();
 
@@ -84,10 +88,33 @@ namespace ART_Application
                 string text = "Connected to server on port " + port;
                 AppendLine(text);
 
+                clientStream = clientSocket.GetStream();
+                clientWriter = new StreamWriter(clientStream);
+                clientReader = new StreamReader(clientStream);
             }
             catch (Exception ex)
             {
                 AppendLine("No Server to connect to..");
+            }
+        }
+
+        /**
+         * This function takes a string and sends it to the TcpListener
+         * on the Unity server side. It uses the StreamWriter class.
+         * @param sendString is the string to be sent to the server (command)
+         */
+        private void sendString(string toSend)
+        {
+            try
+            {
+                clientWriter.WriteLine(toSend);
+                clientWriter.Flush();
+                AppendLine(toSend);
+
+            }
+            catch (Exception ex)
+            {
+                AppendLine(ex.ToString());
             }
         }
 
@@ -125,49 +152,38 @@ namespace ART_Application
             AppendLine("The following " + numCommands + " commands will be performed:");
 
             // make the string to send
+            // The Command Structure would be 
+
+            //   x,TotalCommands{$dothis$dothat$donothing};y,TotalCommands{$hi$hello$hello};x,TotalCommands{$dothis$dothat$donothing}
+            
+            // Here x,y tell which Application is generating this command
+            //TotalCommands tells about total command 
+            // Each command Packet is bounded by curly brackets
+            // $ sign separate commands within a Command packet
+
+            finalCommands = numCommands.ToString() + "{";
             for (int i = 0; i < numCommands; i++)
             {
                 string word = commandArray[i] as string;
                 finalCommands += "$" + word;
                 AppendLine(word);
             }
+            finalCommands += "};";
 
             commandArray.Clear();
 
-            string toSend = numCommands + finalCommands;
-            byte[] myWriteBuffer = Encoding.ASCII.GetBytes(toSend);
-
-            try {
-                NetworkStream clientStream = clientSocket.GetStream();
-
-                clientStream.Write(myWriteBuffer, 0, myWriteBuffer.Length);
-                AppendLine(toSend);
-
-            } catch (Exception ex) {
-                AppendLine(ex.ToString());
-            }
+            string toSend = ApplicationCode +"," + finalCommands;
+            sendString(toSend);
         }
 
         // Cancel button listener
         private void Quit_Click(object sender, EventArgs e)
         {
-            string toSend = "1$Shutdown";
-            byte[] myWriteBuffer = Encoding.ASCII.GetBytes(toSend);
-
-            try
-            {
-                NetworkStream clientStream = clientSocket.GetStream();
-
-                clientStream.Write(myWriteBuffer, 0, myWriteBuffer.Length);
-                AppendLine(toSend.Substring(2));
-            }
-            catch (Exception ex)
-            {
-                AppendLine(ex.ToString());
-            }
+            string toSend = ApplicationCode+","+ "1{$Shutdown};";
+            sendString(toSend);
 
             // Close application after waiting 1 second for Unity to stop the server etc.
-            Thread.Sleep(1000);
+            Thread.Sleep(200);
             this.Close();
         }
 
@@ -426,181 +442,25 @@ namespace ART_Application
             }
         }
 
-        private void StartGame_Click(object sender, EventArgs e)
-        {
-            string boxValue = "";
-
-            boxValue += (string) comboBox_gamesList.SelectedItem;
-
-            if (StartGame.Text == "Start Game") // Then the options box should appear for whichever game is running
-            {
-                if (boxValue == "TheraMem")
-                {
-                    Form optionsForm = new GameOptionsTheraMem(this);
-
-                    optionsForm.ShowDialog();
-
-                    boxValue += this.SetGameMode;
-                }
-                //else if (boxValue == "")
-                //{
-                //}
-            }
-
-            if (boxValue != "")
-            {
-
-                string toSend = "1$" + boxValue;
-                byte[] myWriteBuffer = Encoding.ASCII.GetBytes(toSend);
-
-                try
-                {
-                    NetworkStream clientStream = clientSocket.GetStream();
-
-                    clientStream.Write(myWriteBuffer, 0, myWriteBuffer.Length);
-                    AppendLine("Starting " + toSend);
-
-                }
-                catch (Exception ex)
-                {
-                    AppendLine(ex.ToString());
-                }
-
-                warning.Text = "";
-                //tabControl1.SelectTab(0);
-                if (StartGame.Text == "Start Game")
-                {
-                    gameRunning = true;
-                    comboBox_gamesList.Enabled = false;
-                    Pause.Text = "Resume";
-                    StartGame.Text = "Stop Game";
-                }
-                else if (StartGame.Text == "Stop Game")
-                {
-                    gameRunning = false;
-                    comboBox_gamesList.Enabled = true;
-                    Pause.Text = "Resume";
-                    StartGame.Text = "Start Game";
-                }
-                else
-                {
-                    // should never get here..
-                }
-                //string gameName = comboBox_gamesList.
-            }
-            else
-            {
-                warning.Text = "You must select a valid application before starting...";
-            }
-        }
-
-        private void Pause_Click(object sender, EventArgs e)
-        {
-            if (gameRunning)
-            {
-                string pause = "1$";
-
-                if (Pause.Text == "Pause")
-                {
-                    Pause.Text = "Resume";
-                    pause += "PauseGame";
-                }
-                else
-                {
-                    Pause.Text = "Pause";
-                    pause += "ResumeGame";
-                }
-
-                if (pause != "")
-                {
-
-                    string toSend = pause;
-                    byte[] myWriteBuffer = Encoding.ASCII.GetBytes(toSend);
-
-                    try
-                    {
-                        NetworkStream clientStream = clientSocket.GetStream();
-
-                        clientStream.Write(myWriteBuffer, 0, myWriteBuffer.Length);
-                        AppendLine("Starting " + toSend);
-
-                    }
-                    catch (Exception ex)
-                    {
-                        AppendLine(ex.ToString());
-                    }
-
-                    warning.Text = "";
-                }
-                else
-                {
-                    // will never make it here
-                }
-            }
-            else
-            {
-                warning.Text = "No game is currently running!";
-            }
-        }
-
-        private void Restart_Click(object sender, EventArgs e)
-        {
-
-            if (gameRunning)
-            {
-                string boxValue = "";
-
-                boxValue += (string)comboBox_gamesList.SelectedItem;
-
-                if (boxValue != "")
-                {
-
-                    string toSend = "1$" + "Restart" + boxValue + this.SetGameMode;
-                    byte[] myWriteBuffer = Encoding.ASCII.GetBytes(toSend);
-
-                    try
-                    {
-                        NetworkStream clientStream = clientSocket.GetStream();
-
-                        clientStream.Write(myWriteBuffer, 0, myWriteBuffer.Length);
-                        AppendLine("Starting " + toSend);
-
-                    }
-                    catch (Exception ex)
-                    {
-                        AppendLine(ex.ToString());
-                    }
-
-                    warning.Text = "";
-
-                    Pause.Text = "Resume";
-                    //string gameName = comboBox_gamesList.
-                }
-                else
-                {
-                    warning.Text = "You must select a valid application before starting...";
-                }
-            }
-            else
-            {
-                warning.Text = "No game is currently running to restart!";
-            }
-        }
-
-        private void comboBox_gamesList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdvOptLeft_Click(object sender, EventArgs e)
         {
             // Get list of cameras attached using direct show
             // Pass left camera to change its properties.
-
-
-
-
         }
+
+        private void cb_applyChangesImmediately_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_applyChangesImmediately.Checked)
+            {
+                
+            }
+            else
+            {
+
+            }
+        }
+
+
 
       
 

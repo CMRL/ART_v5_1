@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Unity_Plugin_ART_5_1", "Unity_Plugin_ART_5_1\Unity_Plugin_ART_5_1.vcxproj", "{3CDC9990-15C3-4F04-A7DB-17B854E7318B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Unity_Plugin_ART_SplitCam_5_1", "Unity_Plugin_ART_SplitCam_5_1\Unity_Plugin_ART_SplitCam_5_1.vcxproj", "{F53DDEBE-6799-4256-9138-5642D9FF3F02}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ART_Application", "ART_Application\ART_Application.csproj", "{8FF8C8BD-C05C-43D4-99A8-21A48708DA76}"
 EndProject
 Global
@@ -25,6 +27,16 @@ Global
 		{3CDC9990-15C3-4F04-A7DB-17B854E7318B}.Release|Win32.ActiveCfg = Release|Win32
 		{3CDC9990-15C3-4F04-A7DB-17B854E7318B}.Release|Win32.Build.0 = Release|Win32
 		{3CDC9990-15C3-4F04-A7DB-17B854E7318B}.Release|x86.ActiveCfg = Release|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Debug|Win32.Build.0 = Debug|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Debug|x86.ActiveCfg = Debug|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Release|Win32.ActiveCfg = Release|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Release|Win32.Build.0 = Release|Win32
+		{F53DDEBE-6799-4256-9138-5642D9FF3F02}.Release|x86.ActiveCfg = Release|Win32
 		{8FF8C8BD-C05C-43D4-99A8-21A48708DA76}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{8FF8C8BD-C05C-43D4-99A8-21A48708DA76}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{8FF8C8BD-C05C-43D4-99A8-21A48708DA76}.Debug|Win32.ActiveCfg = Debug|x86

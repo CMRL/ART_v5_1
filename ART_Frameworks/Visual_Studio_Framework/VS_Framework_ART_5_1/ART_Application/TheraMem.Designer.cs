@@ -1,4 +1,4 @@
-﻿namespace TheraMem
+﻿namespace ART_Application
 {
     partial class TheraMem
     {
@@ -71,6 +71,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnPause = new System.Windows.Forms.Button();
+            this.button_advanced = new System.Windows.Forms.Button();
             this.tabTheraMem.SuspendLayout();
             this.tabGeneral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,7 +88,7 @@
             // 
             // QuitApplication
             // 
-            this.QuitApplication.Location = new System.Drawing.Point(290, 666);
+            this.QuitApplication.Location = new System.Drawing.Point(385, 666);
             this.QuitApplication.Name = "QuitApplication";
             this.QuitApplication.Size = new System.Drawing.Size(90, 23);
             this.QuitApplication.TabIndex = 2;
@@ -138,14 +139,15 @@
             // 
             this.comboGameStyle.FormattingEnabled = true;
             this.comboGameStyle.Items.AddRange(new object[] {
-            "TheraMem ( Orignal )",
-            "TheraMem ( Memory )"});
+            "TheraMem ( Original )",
+            "TheraMem ( Memory )",
+            "TheraMem ( One-Handed )"});
             this.comboGameStyle.Location = new System.Drawing.Point(257, 98);
             this.comboGameStyle.Name = "comboGameStyle";
             this.comboGameStyle.Size = new System.Drawing.Size(186, 21);
             this.comboGameStyle.TabIndex = 15;
             this.comboGameStyle.Tag = "";
-            this.comboGameStyle.Text = "TheraMem ( Orignal )";
+            this.comboGameStyle.Text = "TheraMem ( Original )";
             this.comboGameStyle.SelectedIndexChanged += new System.EventHandler(this.comboGameStyle_SelectedIndexChanged);
             // 
             // txtDebug
@@ -540,7 +542,7 @@
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(98, 666);
+            this.btnPlay.Location = new System.Drawing.Point(12, 666);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(90, 23);
             this.btnPlay.TabIndex = 4;
@@ -551,7 +553,7 @@
             // btnPause
             // 
             this.btnPause.Enabled = false;
-            this.btnPause.Location = new System.Drawing.Point(194, 666);
+            this.btnPause.Location = new System.Drawing.Point(108, 666);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(90, 23);
             this.btnPause.TabIndex = 5;
@@ -559,11 +561,22 @@
             this.btnPause.UseVisualStyleBackColor = true;
             this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
+            // button_advanced
+            // 
+            this.button_advanced.Location = new System.Drawing.Point(289, 666);
+            this.button_advanced.Name = "button_advanced";
+            this.button_advanced.Size = new System.Drawing.Size(90, 23);
+            this.button_advanced.TabIndex = 6;
+            this.button_advanced.Text = "Advanced";
+            this.button_advanced.UseVisualStyleBackColor = true;
+            this.button_advanced.Click += new System.EventHandler(this.button_advanced_Click);
+            // 
             // TheraMem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 701);
+            this.Controls.Add(this.button_advanced);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.tabTheraMem);
@@ -639,6 +652,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button button_advanced;
     }
 }
 

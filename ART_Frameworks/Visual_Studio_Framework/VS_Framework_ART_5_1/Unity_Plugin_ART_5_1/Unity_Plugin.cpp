@@ -32,6 +32,7 @@
 #include "Utils.h"
 #include "SegmentationManager.hpp"
 #include "ConfigHandler.hpp"
+#include "FingerTracker.hpp"
 
 // namespaces
 using namespace std;
@@ -45,6 +46,7 @@ ConfigHandler* config_		            ; // all individual settings are stored in t
 VideoCapture webcamStream_              ; // for video capturing from cameras or files
 VideoCapture testcaseStream_            ; // loads the depth data for testcases only
 SegmentationManager* segMgr_            ; // instance to do the hand/finger segmentation
+FingerTracker* fingTr_					; // Instance to handle finger tracking operations
 double framecounter_                    ; // used to count frames when loading video files for testcases
 
 #ifndef NO_TESTCASE
@@ -135,6 +137,9 @@ Resolution EXPORT_API start_capture_right(int webcam)
 		}
 	}
 
+	// fingertip tracking
+	fingTr_ = new FingerTracker(config_);
+
 	Resolution unityRes= {colorframeWidth_,colorframeHeight_};
 	return unityRes;
 }
@@ -196,9 +201,9 @@ void EXPORT_API reloadConfigFile_right()
 /*		  finger tracking details to.									*/
 /************************************************************************/
 #ifndef USE_LEFT_CAM
-void EXPORT_API frame_copy_to_Unity_left(ColorRGBA* colors, Fingertip* fingertips)
+void EXPORT_API frame_copy_to_Unity_left(ColorRGBA* colors, Fingertip* fingertips, Properties properties)
 #else
-void EXPORT_API frame_copy_to_Unity_right(ColorRGBA* colors, Fingertip* fingertips)
+void EXPORT_API frame_copy_to_Unity_right(ColorRGBA* colors, Fingertip* fingertips, Properties properties)
 #endif
 {
 	// Mats for holding the current RGB and Depth frames
@@ -283,6 +288,10 @@ void EXPORT_API frame_copy_to_Unity_right(ColorRGBA* colors, Fingertip* fingerti
 	//if(currentColorFrame)imshow("woswasi RGB",*currentColorFrame);
 	//if(currentDepthFrame)imshow("woswasi DEPTH",*currentDepthFrame);
 
+	// Set the seg and track methods to be used for this plane
+	if (config_->background_segmentation_.segMethod != properties.seg_method) {config_->background_segmentation_.segMethod = properties.seg_method;}
+	if (config_->fingertip_tracking_.trackMethod != properties.track_method) {config_->fingertip_tracking_.trackMethod = properties.track_method;}
+	
 	// segmentation process
 	if(config_->background_segmentation_.segMethod==1)
 	{
@@ -305,28 +314,28 @@ void EXPORT_API frame_copy_to_Unity_right(ColorRGBA* colors, Fingertip* fingerti
 	}
 
 	// fingertracking process
-	//if(config_->fingertip_tracking_.trackMethod==1)
-	//{
-	//	fingTr_->findHighestPoint(fingertips,colors,config_->fingertip_tracking_.simpleEdgeLimit,config_->fingertip_tracking_.simpleCheckRadius);
-	//}
-	//else if(config_->fingertip_tracking_.trackMethod==2)
-	//{
-	//	fingTr_->fitEllipseOfHandSegment(fingertips, config_->fingertip_tracking_.nrHandPixels,&segMgr_->handMask_);
-	//}
-	//else if(config_->fingertip_tracking_.trackMethod==3)
-	//{
-	//	intelStream_->fingertipTracking(fingertips);
-	//}
-	//else if(config_->fingertip_tracking_.trackMethod==4)
-	//{
-	//	// MACHINE LEARNING ... comming soon
-	//}
-	//else
-	//{
-	//	fingTr_->resetFingertips(fingertips);
-	//	cout << "Please choose a fingertracking method" << endl;
-	//	return;
-	//}
+	if(config_->fingertip_tracking_.trackMethod==1)
+	{
+		fingTr_->findHighestPoint(fingertips,colors,config_->fingertip_tracking_.simpleEdgeLimit,config_->fingertip_tracking_.simpleCheckRadius);
+	}
+	else if(config_->fingertip_tracking_.trackMethod==2)
+	{
+		fingTr_->fitEllipseOfHandSegment(fingertips, config_->fingertip_tracking_.nrHandPixels,&segMgr_->handMask_);
+	}
+	else if(config_->fingertip_tracking_.trackMethod==3)
+	{
+		//intelStream_->fingertipTracking(fingertips);
+	}
+	else if(config_->fingertip_tracking_.trackMethod==4)
+	{
+		// MACHINE LEARNING ... coming soon
+	}
+	else
+	{
+		fingTr_->resetFingertips(fingertips);
+		cout << "Please choose a finger tracking method" << endl;
+		return;
+	}
 
 	// we are ready
 	return;

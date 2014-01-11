@@ -11,31 +11,35 @@ namespace ART_Application
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Dialog());
+            if(args.Length > 0)
+             for(int i = 0; i < args.Length; i++)
+            {
+          
+                if (args[i] == "0") //----Start ART Application ---//
+                {
+                    Application.Run(new Main_Dialog());
+                }
+                else if (args[i] == "1")//----Start TheraMem ---//
+                {
+                    Application.Run(new TheraMem());
+                    
+                }
+                else if (args[i] == "2")//----Start Profiles ---//
+                {
+                    Application.Run(new FrmProfileHandler());
+                }
+             }
+            else
+            {
+                //Application.Run(new Main_Dialog());
+            }
+            
 
-            //Application.Run(new FrmProfileHandler());
-
-
-            //// Create a XML reader
-            //XmlDocument doc = new XmlDocument();
-
-            //// Load an XML file
-            //doc.Load("Profiles.xml");
-
-            //// Traverse through complete file
-            //XmlNode element = doc.DocumentElement;
-            //XmlNodeList elementchilds = element.ChildNodes;
-            //foreach (XmlNode profile in elementchilds)
-            //{
-            //    string text = profile.InnerText;
-            //    Console.Write(text);
-
-
-            //}
+                                 
         }
     }
 }
