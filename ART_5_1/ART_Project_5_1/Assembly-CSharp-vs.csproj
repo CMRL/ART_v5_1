@@ -44,8 +44,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ApplicationInitializer.cs" />
+     <Compile Include="Assets\Scripts\ClientHandler.cs" />
+     <Compile Include="Assets\Scripts\CommandHandler.cs" />
+     <Compile Include="Assets\Scripts\Coord_Handler.cs" />
+     <Compile Include="Assets\Scripts\Finger_Tip_Sphere.cs" />
      <Compile Include="Assets\Scripts\Plugin_Data.cs" />
-     <Compile Include="Assets\Scripts\Plugin_Handler.cs" />
+     <Compile Include="Assets\Scripts\TheraMem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

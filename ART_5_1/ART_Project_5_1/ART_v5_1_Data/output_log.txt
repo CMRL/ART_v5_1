@@ -1,0 +1,128 @@
+Initialize engine version: 4.2.0f4 (38efbd14869d)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [aticfx32.dll 8.17.10.1077]
+    Renderer: AMD Radeon HD 6450
+    Vendor:   ATI
+    VRAM:     1008 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=1 DF24=1 INTZ=1 RAWZ=0 NULL=1 RESZ=1 SlowINTZ=1
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\msrladmin\Documents\GitHub\ART_v5_1\ART_5_1\ART_Project_5_1\ART_v5_1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\msrladmin\Documents\GitHub\ART_v5_1\ART_5_1\ART_Project_5_1\ART_v5_1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\msrladmin\Documents\GitHub\ART_v5_1\ART_5_1\ART_Project_5_1\ART_v5_1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\msrladmin\Documents\GitHub\ART_v5_1\ART_5_1\ART_Project_5_1\ART_v5_1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.037 seconds
+desktop: 1920x1080 60Hz; virtual: 4566x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\msrladmin\Documents\GitHub\ART_v5_1\ART_5_1\ART_Project_5_1\ART_v5_1_Data\Managed\System.dll (this message is harmless)
+Server started..
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+C:/Users/msrladmin/Documents/GitHub/ART_v5_1/ART_5_1/ART_Project_5_1/ART_v5_1_Data
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Server started..
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Client Connected!
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+0,1{$RightOnLeft};
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+App Code: 0
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Number of Commands: 1
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+From ART: RightOnLeft
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+RightOnLeft
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+0,1{$LeftMirror};
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+App Code: 0
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Number of Commands: 1
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+From ART: LeftMirror
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+LeftMirror
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+0,1{$TheraMem};
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+App Code: 0
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Number of Commands: 1
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+From ART: TheraMem
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Command: TheraMem
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 392.923828 ms
+[mecanim]: BindSkeleton: cannot find Transform 'object2'
+ 
+(Filename:  Line: 1487)
+
+[mecanim]: BindSkeleton: cannot find Transform 'object3'
+ 
+(Filename:  Line: 1487)
+
+[mecanim]: BindSkeleton: cannot find Transform 'object2'
+ 
+(Filename:  Line: 1487)
+
+[mecanim]: BindSkeleton: cannot find Transform 'object2'
+ 
+(Filename:  Line: 1487)
+
+[mecanim]: BindSkeleton: cannot find Transform 'object2'
+ 
+(Filename:  Line: 1487)
+
+[mecanim]: BindSkeleton: cannot find Transform 'object3'
+ 
+(Filename:  Line: 1487)
+
+Initializing TheraMem in Original game mode.
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 510.
+Total: 0.483268 ms (FindLiveObjects: 0.023242 ms CreateObjectMapping: 0.012376 ms MarkObjects: 0.102328 ms  DeleteObjects: 0.024752 ms)
+
